@@ -1,0 +1,109 @@
+.checkout-page { padding: 32px 0 80px; }
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: start;
+}
+
+.checkout-form, .checkout-summary {
+  padding: 28px;
+}
+
+.checkout-form h3, .checkout-summary h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.customer-info {
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+}
+.customer-info h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+.info-row span { color: var(--text-secondary); }
+
+/* Order items */
+.order-items {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-item-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.order-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.order-item-name { font-size: 0.9rem; font-weight: 600; }
+.order-item-meta { font-size: 0.8rem; color: var(--text-secondary); }
+.order-item-price { font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
+
+/* Totals */
+.checkout-totals {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.total-divider { height: 1px; background: var(--border); margin: 4px 0; }
+.total-grand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.total-grand span:last-child {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+.free-tag { color: var(--success); font-weight: 700; }
+
+.checkout-note {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+}
