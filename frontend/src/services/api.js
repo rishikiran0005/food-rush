@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Base URL - Spring Boot runs on port 8080
-const API_BASE_URL = 'http://localhost:8080/api';
+// Base URL — reads from env var in production (Vercel), falls back to localhost for dev
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080/api';
 
 // Create axios instance
 const api = axios.create({
