@@ -36,7 +36,7 @@ const Checkout = () => {
         specialInstructions,
       };
 
-      const res = await orderAPI.placeOrder(orderPayload);
+      await orderAPI.placeOrder(orderPayload);
       clearCart();
       toast.success('🎉 Order placed successfully!');
       navigate(`/orders`);
